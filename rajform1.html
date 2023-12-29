@@ -1,0 +1,124 @@
+
+<html>
+<head>
+<title></title>
+<style type="text/css">
+
+.con{
+height:100%;
+width:100%;
+background:black;
+}
+.aht{
+font-size:50px;
+color:#610B38;
+}
+.fti{
+font-size:45px;
+margin-left:30px;
+color:#0B4C5F;
+}
+.inti{
+font-size:40px;
+margin-left:30px;
+height:100px;
+width:900px;
+border-radius:15px;
+font-size:45px;
+border:solid orange;
+}
+.inti2{
+font-size:45px;
+margin-left:30px;
+height:100px;
+width:600px;
+border-radius:15px;
+border:solid orange;
+}
+#qui{
+text-align:center;
+}
+input[type="checkbox"]{
+height:40px;
+width:40px;
+border:solid orange;
+}
+.btn{
+font-size:70px;
+padding-top:10px;
+padding-bottom:10px;
+padding-left:90px;
+padding-right:90px;
+border-radius:5px;
+border:solid orange;
+color:orange;
+}
+.btn:hover{
+font-size:70px;
+padding-top:10px;
+padding-bottom:10px;
+padding-left:90px;
+padding-right:90px;
+border-radius:20px;
+border:solid orange;
+color:green;
+background:white;
+}
+.end{
+height:40%;
+width:100%;
+background:url("https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEju4WV4WxXE62Fg9AGU1JiP-vcuhjSbHkiDmeG2J6dBWuVnMo_HCP4PrI9cMsbfW7hzPhaCgmRzVz8qodBi2UdNUwwbBXibRKEOqHPW5sEBbJnSmsUMlFng9zBzeLmN9dEtnexvIvw6-TNv2RrIuaggkJLhCPVYx5LpqL2YYOkbFF1kxOlU8u1rM26ZOxw/s380/cow-59.gif");
+background-repeat:no-repeat;
+}
+#murl{
+display:none;
+}
+</style>
+</head>
+<body bgcolor="black" >
+<div class="con" >
+<hr size="2px" color="pink"  >
+ <form method="post"" name="contactform" id="contactform">
+ <input type="text" value="dete1.html" name="A1" id="murl"  ></input>
+<p><b class="aht">Your Deteless</b></p>
+<b class="fti" >Full Name</b><br>
+<input type="text" class="inti" name="B1"></input><br>
+<b class="fti" >Full Addresh</b><br>
+<input type="text" class="inti" name="C1"></input><br>
+<b class="fti" >Mobile Number</b><br>
+<input type="Number" class="inti2" name="D1"></input><br>
+<b class="fti" >Gmail address</b><br>
+<input type="gmail" class="inti" name="E1"></input><br>
+<b class="fti" >Pin code</b><br>
+<input type="text" class="inti" style="width:350px;" name="F1"></input><br>
+<b class="fti" >State</b><b class="fti" style="margin-left:330px;" >city</b><br>
+<input type="text" class="inti" value="Bihar" style="width:400px;" name="G1"></input>
+<input type="text" class="inti" value="Kishanganj" style="width:468px;" name="H1"></input><br>
+<hr size="2px" color="pink" >
+<p><b class="aht" >Product Deteless</b></p><br>
+<b class="fti" >Quantity:-</b>
+<input type="number" class="inti" id="qui" value="01" style="width:100px;" name="I1"></input><br>
+<p><b class="aht" >Payment method</b></p><br>
+<b class="fti">Cash on delivery:-
+<input type="checkbox" class="cbx" name="J1" value="rajform1" ></input></b>
+<hr size="2px" color="pink" ><br>
+<center><button class="btn" >Submit data</button></center>
+<center><hr size="4px" color="orange" width="550px" ></center>
+<center><hr size="4px" color="white" width="550px" ></center>
+<center><hr size="4px" color="green" width="550px" ></center>
+</form>
+</div>
+</body>
+<script>
+const scriptURL = 'https://script.google.com/macros/s/AKfycbxlOQuld2H9xO8TTMUOaksCh8eZRCIk9A6O3lIb-KEEnJR1zpSw3ArxIcJ1ormmuvw/exec'
+const form = document.forms['contactform']
+
+form.addEventListener('submit', e => {
+e.preventDefault()
+fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+.then(response => alert("You entered the passcode incorrectly." ))
+.then(() => {  window.location.reload(); })
+.catch(error => console.error('Error!', error.message))
+})
+</script>
+</html>
