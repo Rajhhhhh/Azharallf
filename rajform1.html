@@ -1,124 +1,167 @@
-
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<title></title>
-<style type="text/css">
+    <meta charset="UTF-8">
+    <title>PAC Business</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-.con{
-height:100%;
-width:100%;
-background:black;
-}
-.aht{
-font-size:50px;
-color:#610B38;
-}
-.fti{
-font-size:45px;
-margin-left:30px;
-color:#0B4C5F;
-}
-.inti{
-font-size:40px;
-margin-left:30px;
-height:100px;
-width:900px;
-border-radius:15px;
-font-size:45px;
-border:solid orange;
-}
-.inti2{
-font-size:45px;
-margin-left:30px;
-height:100px;
-width:600px;
-border-radius:15px;
-border:solid orange;
-}
-#qui{
-text-align:center;
-}
-input[type="checkbox"]{
-height:40px;
-width:40px;
-border:solid orange;
-}
-.btn{
-font-size:70px;
-padding-top:10px;
-padding-bottom:10px;
-padding-left:90px;
-padding-right:90px;
-border-radius:5px;
-border:solid orange;
-color:orange;
-}
-.btn:hover{
-font-size:70px;
-padding-top:10px;
-padding-bottom:10px;
-padding-left:90px;
-padding-right:90px;
-border-radius:20px;
-border:solid orange;
-color:green;
-background:white;
-}
-.end{
-height:40%;
-width:100%;
-background:url("https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEju4WV4WxXE62Fg9AGU1JiP-vcuhjSbHkiDmeG2J6dBWuVnMo_HCP4PrI9cMsbfW7hzPhaCgmRzVz8qodBi2UdNUwwbBXibRKEOqHPW5sEBbJnSmsUMlFng9zBzeLmN9dEtnexvIvw6-TNv2RrIuaggkJLhCPVYx5LpqL2YYOkbFF1kxOlU8u1rM26ZOxw/s380/cow-59.gif");
-background-repeat:no-repeat;
-}
-#murl{
-display:none;
-}
-</style>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f4f6f8;
+            color: #333;
+        }
+
+        /* Header */
+        header {
+            background-color: #0a3d62;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 28px;
+        }
+
+        header p {
+            margin: 5px 0 0;
+            font-size: 14px;
+        }
+
+        /* Navigation */
+        nav {
+            background-color: #082f49;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 15px;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* Main Container */
+        .container {
+            padding: 40px 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        /* Card Grid */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 25px;
+        }
+
+        /* Card */
+        .card {
+            background: linear-gradient(135deg, #0a3d62, #1e90ff);
+            color: white;
+            text-decoration: none;
+            padding: 25px 15px;
+            border-radius: 14px;
+            text-align: center;
+            height: 160px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            box-shadow: 0 8px 18px rgba(0,0,0,0.2);
+            transition: all 0.3s ease;
+        }
+
+        .card h3 {
+            margin: 0;
+            font-size: 18px;
+        }
+
+        .card p {
+            margin-top: 8px;
+            font-size: 13px;
+            opacity: 0.9;
+        }
+
+        .card:hover {
+            transform: translateY(-8px) scale(1.04);
+            box-shadow: 0 18px 35px rgba(0,0,0,0.35);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #082f49;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 40px;
+            font-size: 14px;
+        }
+    </style>
 </head>
-<body bgcolor="black" >
-<div class="con" >
-<hr size="2px" color="pink"  >
- <form method="post"" name="contactform" id="contactform">
- <input type="text" value="rajform1.html" name="A1" id="murl"  ></input>
-<p><b class="aht">Your Deteless</b></p>
-<b class="fti" >Full Name</b><br>
-<input type="text" class="inti" name="B1"></input><br>
-<b class="fti" >Full Addresh</b><br>
-<input type="text" class="inti" name="C1"></input><br>
-<b class="fti" >Mobile Number</b><br>
-<input type="Number" class="inti2" name="D1"></input><br>
-<b class="fti" >Gmail address</b><br>
-<input type="gmail" class="inti" name="E1"></input><br>
-<b class="fti" >Pin code</b><br>
-<input type="text" class="inti" style="width:350px;" name="F1"></input><br>
-<b class="fti" >State</b><b class="fti" style="margin-left:330px;" >city</b><br>
-<input type="text" class="inti" value="Bihar" style="width:400px;" name="G1"></input>
-<input type="text" class="inti" value="Kishanganj" style="width:468px;" name="H1"></input><br>
-<hr size="2px" color="pink" >
-<p><b class="aht" >Product Deteless</b></p><br>
-<b class="fti" >Quantity:-</b>
-<input type="number" class="inti" id="qui" value="01" style="width:100px;" name="I1"></input><br>
-<p><b class="aht" >Payment method</b></p><br>
-<b class="fti">Cash on delivery:-
-<input type="checkbox" class="cbx" name="J1" value="cash on delivery" ></input></b>
-<hr size="2px" color="pink" ><br>
-<center><button class="btn" >Submit data</button></center>
-<center><hr size="4px" color="orange" width="550px" ></center>
-<center><hr size="4px" color="white" width="550px" ></center>
-<center><hr size="4px" color="green" width="550px" ></center>
-</form>
-</div>
-</body>
-<script>
-const scriptURL = 'https://script.google.com/macros/s/AKfycbxlOQuld2H9xO8TTMUOaksCh8eZRCIk9A6O3lIb-KEEnJR1zpSw3ArxIcJ1ormmuvw/exec'
-const form = document.forms['contactform']
 
-form.addEventListener('submit', e => {
-e.preventDefault()
-fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-.then(response => alert("You entered the passcode incorrectly." ))
-.then(() => {  window.location.reload(); })
-.catch(error => console.error('Error!', error.message))
-})
-</script>
+<body>
+
+    <header>
+        <h1>PAC , ARC</h1>
+        <p>Simple • Professional • Reliable</p>
+    </header>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+    </nav>
+
+    <div class="container">
+
+        <div class="card-grid">
+
+            <a href="https://docs.google.com/spreadsheets/d/1GeQH9AEgmz_bcJkRbHzzlTN7KH4FtLV19GMwmcnjY7c/edit?usp=sharing" class="card">
+                <h3>ARC Amount </h3>
+                <p>arc cash </p>
+            </a>
+
+           <a href="#" class="card">
+                <h3>Our Services</h3>
+                <p>Hum kya services dete hain</p>
+            </a>
+
+            <a href="#" class="card">
+                <h3>Projects</h3>
+                <p>Hamare kaam ka experience</p>
+            </a>
+
+            <a href="#" class="card">
+                <h3>Contact</h3>
+                <p>Humse sampark kare</p>
+            </a>
+
+            <a href="#" class="card">
+                <h3>Gallery</h3>
+                <p>Images aur designs dekhe</p>
+            </a>
+
+            <a href="#" class="card">
+                <h3>Support</h3>
+                <p>Madad aur guidance</p>
+            </a>
+
+        </div>
+
+    </div>
+
+    <footer>
+        © 2026 PAC Business | All Rights Reserved
+    </footer>
+
+</body>
 </html>
