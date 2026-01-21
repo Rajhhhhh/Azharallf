@@ -1,68 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Form to WhatsApp</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      padding: 20px;
-      background: #f2f2f2;
-    }
-    form {
-      background: white;
-      padding: 20px;
-      border-radius: 10px;
-      max-width: 400px;
-      margin: auto;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
-    input, select, button {
-      width: 100%;
-      padding: 10px;
-      margin: 10px 0;
-      border-radius: 5px;
-      border: 1px solid #ccc;
-    }
-    button {
-      background-color: #25D366;
-      color: white;
-      font-weight: bold;
-      border: none;
-      cursor: pointer;
-    }
-    button:hover {
-      background-color: #1ebd59;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Responsive Page</title>
+
+<style>
+*{
+    box-sizing:border-box;
+}
+
+/* Background GIF */
+.gifi{
+    margin:0;
+    font-family:Arial, sans-serif;
+    height:100vh;
+    overflow-x:hidden;
+
+    background-image: url("https://www.onlineprestigemanagement.com/uploads/pages/service-img41.gif");
+    background-size:400px;
+    background-position:center;
+    background-repeat:no-repeat;
+}
+
+/* 3 line menu */
+.menu-btn{
+    position:fixed;
+    top:15px;
+    left:15px;
+    font-size:32px;
+    color:black;
+    cursor:pointer;
+    z-index:1001;
+    user-select:none;
+}
+
+/* Desk Box */
+.deskbox{
+    position:fixed;
+    top:0;
+    left:-100%;
+    width:80%;
+    max-width:300px;
+    height:100vh;
+    background:#fff;
+    box-shadow:2px 0 10px rgba(0,0,0,0.4);
+    transition:0.3s;
+    padding:20px;
+    z-index:1000;
+}
+
+.deskbox h2{
+    margin-top:0;
+    color:red;
+}
+
+.close-btn{
+    width:100%;
+    padding:10px;
+    border:none;
+    background:red;
+    color:#fff;
+    font-size:16px;
+    cursor:pointer;
+    border-radius:5px;
+}
+
+/* black hr */
+.deskbox hr{
+    margin:15px 0;
+    height:2px;
+    border:none;
+    background:black;
+}
+
+/* links style */
+.deskbox a{
+    text-decoration:none;
+    color:black;
+    display:block;
+    padding:6px 0;
+}
+</style>
 </head>
+
 <body>
+<div class="gifi">
 
-  <form id="whatsappForm">
-    <h2>Submit Details</h2>
-    <input type="text" id="name" placeholder="Name" required>
-    <input type="tel" id="mobile" placeholder="Mobile Number" required>
-    <input type="text" id="state" placeholder="State" required>
-    <input type="text" id="district" placeholder="District" required>
-    <button type="submit">Submit</button>
-  </form>
+<!-- Menu Button -->
+<div class="menu-btn" id="menuBtn" onclick="openBox()">☰</div>
 
-  <script>
-    document.getElementById("whatsappForm").addEventListener("submit", function(event){
-      event.preventDefault();
+<!-- Desk Box -->
+<div class="deskbox" id="deskbox">
+    <h2>RAJ PASWAN</h2>
+    <p>Raj Paswan</p>
+    <p>Mob: 7369022818</p>
 
-      const name = document.getElementById("name").value;
-      const mobile = document.getElementById("mobile").value;
-      const state = document.getElementById("state").value;
-      const district = document.getElementById("district").value;
+    <button class="close-btn" onclick="closeBox()">Close</button>
 
-      const message = `Name: ${name}%0AMobile: ${mobile}%0AState: ${state}%0ADistrict: ${district}`;
-      const phoneNumber = "7369022818";
+    <hr>
 
-      const whatsappURL = `https://wa.me/91${phoneNumber}?text=${message}`;
-      window.open(whatsappURL, '_blank');
-    });
-  </script>
+    <p><a href="#">Home</a></p>
+    <p><a href="#">KISHANGANJ</a></p>
+    <p><a href="arc.html">ARARIA SHOP </a></p>
+    <p><a href="#">About Us</a></p>
+    <p><a href="#">Contact</a></p>
+</div>
 
+<script>
+function openBox(){
+    document.getElementById("deskbox").style.left="0";
+    document.getElementById("menuBtn").style.display="none";
+}
+
+function closeBox(){
+    document.getElementById("deskbox").style.left="-100%";
+    document.getElementById("menuBtn").style.display="block";
+}
+</script>
+
+</div>
 </body>
 </html>
